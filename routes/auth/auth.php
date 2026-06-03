@@ -1,8 +1,6 @@
 <?php
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 
-class AuthRoutes {
-    public static function routes(){
-        Route::post('/login');
-    }
-}
+
+Route::post('/login', [AuthController::class, 'login']);
